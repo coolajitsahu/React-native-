@@ -1,0 +1,36 @@
+1. Create Redux Store
+import { createStore } from "redux";
+import reducer from "../reducers";
+
+const initialState = { tech: "React " };
+export const store = createStore(reducer, initialState);
+
+////////////
+create store 
+////////////
+
+
+
+
+
+2. //The Store (Bank Vault) and the Reducer (Cashier) communicate with each other
+
+Reducer is a function in Redux that takes two parameters. One is STATE of the app and the other is ACTION. 
+
+function reducer (state, action) {
+	switch (action.type) {
+		case "withdraw_money":
+			//do something
+			break;
+		case "deposit-money":
+			//do something
+			break;
+		default:
+			return state;
+		}
+		
+}
+
+3.Action
+
+When you are dispatching an action, it passes through the Reducer (cashier) to store

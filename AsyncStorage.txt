@@ -1,0 +1,43 @@
+1.Async Storage::
+
+Async storage is an uncripted ,asynchronus, key value storage system that is global to app
+
+2. Async storage method()::
+
+getItem(): It fetches an item for a key.
+setItem(): It sets an item for a particular key.
+removeItem(): It removes an item for a key.
+clear(): It erases all AsyncStorage for all clients, libraries, etc.
+
+
+
+
+2. Async storage example:::
+
+import { AsyncStorage } from 'react-native';
+const[data,setdata]=setState("");
+
+_storeData = async () => {
+  try {
+    await AsyncStorage.setItem(
+      "name","Ajit sahu"
+    );
+  } catch (error) {
+    // Error saving data
+  }
+};
+
+
+_retrieveData = async () => {
+  try {
+    const value = await AsyncStorage.getItem('name');
+    if (value !== null) {
+      // We have data!!
+      console.log(value);
+    }
+  } catch (error) {
+    // Error retrieving data
+  }
+};
+
+

@@ -1,0 +1,7 @@
+update expo sdk step
+
+1.remove node_module
+2.package.lock.json
+4.remove expo from package.json
+5.npm install expo@42.0.0
+6.npm start 
